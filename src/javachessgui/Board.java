@@ -897,10 +897,10 @@ public class Board {
             
             int shift=(int)((piece_size)/2);
 
-            int from_x=gc_x(bestmove.i1)+shift;
-            int from_y=gc_y(bestmove.j1)+shift+padding;
-            int to_x=gc_x(bestmove.i2)+shift;
-            int to_y=gc_y(bestmove.j2)+shift+padding;
+            final int from_x=gc_x(bestmove.i1)+shift;
+            final int from_y=gc_y(bestmove.j1)+shift+padding;
+            final int to_x=gc_x(bestmove.i2)+shift;
+            final int to_y=gc_y(bestmove.j2)+shift+padding;
             
             Platform.runLater(new Runnable()
             {
@@ -1068,9 +1068,9 @@ public class Board {
              {
                  fonts[i][j]=
                          is_dark_square(i,j)?
-                         (char)translit_dark.get(board[i][j])
+                         (Character)translit_dark.get(board[i][j])
                          :
-                         (char)translit_light.get(board[i][j]);
+                         (Character)translit_light.get(board[i][j]);
              }
          }
         
@@ -2117,7 +2117,7 @@ public class Board {
                     drag_dy=drag_from_y-y;
                     orig_drag_piece=fonts[drag_from_i][drag_from_j];
                     orig_piece=board[drag_from_i][drag_from_j];
-                    drag_piece=(char)translit_light.get(orig_piece);
+                    drag_piece=(Character)translit_light.get(orig_piece);
                     
                     orig_empty=is_dark_square(drag_from_i,drag_from_j)?'+':' ';
                     
@@ -2658,7 +2658,7 @@ public class Board {
         
         Group select_engine_group=new Group();
         
-        ListView<String> list = new ListView<String>();
+        final ListView<String> list = new ListView<String>();
         
         list.setMinWidth(600);
         
@@ -2950,8 +2950,8 @@ public class Board {
             main_box.getChildren().add(list);
 
             engine_text.setMaxHeight(100);
-
-            engine_text.setFont(engine_font);
+            //TODO
+            //engine_text.setFont(engine_font);
             vertical_box.getChildren().add(engine_text);
 
             upper_canvas.setOnMouseDragged(mouseHandler);

@@ -505,8 +505,8 @@ public class Game {
             }
 
             // sort book list
-
-            book_list.sort(new BookMoveComparator());
+            //TODO
+            //book_list.sort(new BookMoveComparator());
 
             no_book_moves=book_list.size();
 
@@ -1127,7 +1127,7 @@ public class Game {
             
             do_deep_i=0;
             
-            String fen=b.report_fen();
+            final String fen=b.report_fen();
                         
             for(int i=0;i<deep_legal_move_list_buffer_cnt;i++)
             {
