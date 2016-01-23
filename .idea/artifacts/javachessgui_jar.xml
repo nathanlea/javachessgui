@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="javachessgui:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/javachessgui_jar</output-path>
+    <root id="archive" name="javachessgui.jar">
+      <element id="module-output" name="javachessgui" />
+    </root>
+  </artifact>
+</component>
